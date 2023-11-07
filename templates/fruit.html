@@ -1,0 +1,8 @@
+{{define "title"}} {{ .Name }} Details {{end}}
+{{ define "content" }}
+    <h2>Fruit Details</h2>
+    <p>Name: {{ .Name }}</p>
+    <p><a href="/list">Back to List</a></p>
+    <p><a href="/edit?id={{ .ID }}">Edit</a></p>
+    <p><a href="/delete?id={{ .ID }}">Delete</a></p>
+{{ end }}

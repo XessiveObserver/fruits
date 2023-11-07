@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ block "title" .}}{{ end }}</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <h1>Fruit App</h1>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/list">List Fruits</a></li>
+        </ul>
+    </header>
+    <main>
+        {{ block "content" .}}
+        {{ end }}
+    </main>
+    <footer>
+        &copy; 2023 Fruit App
+    </footer>
+    <script src="/static/js/bootstrap.min.js"></script>
+</body>
+</html>

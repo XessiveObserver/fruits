@@ -1,0 +1,12 @@
+{{define "title"}}All Fruits{{end}}
+{{ define "content" }}
+    <h2>List of Fruits</h2>
+    <ul>
+        {{ range . }}
+        <li>
+        {{ .Name }}- <a href="/fruit?id={{ .ID }}">View Details</a>
+        </li>
+        {{ end }}
+    </ul>
+    <p><a href="/add">Add a Fruit</a></p>
+{{ end }}

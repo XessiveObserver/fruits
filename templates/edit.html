@@ -1,0 +1,11 @@
+{{define "title"}} Edit - {{ .Name }} {{end}}
+{{ define "content" }}
+<h2>Edit Fruit</h2>
+<form action="/edit" method="post">
+    <input type="hidden" name="id" value="{{ .ID }}">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" value="{{ .Name }}" required><br>
+    <input type="submit" value="Update">
+</form>
+<p><a href="/list">Back to List</a></p>
+{{ end }}

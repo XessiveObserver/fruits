@@ -1,0 +1,9 @@
+{{define "title"}}Add fruit{{end}}
+{{ define "content" }}
+    <h2>Add a Fruit</h2>
+    <form action="/add" method="post">
+        <label for="name">Fruit name:</label>
+        <input type="text" name="name" id="name" required><br>
+        <input type="submit" value="Add">
+    </form>
+{{ end }}
