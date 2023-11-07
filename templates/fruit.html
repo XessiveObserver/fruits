@@ -1,8 +1,11 @@
 {{define "title"}} {{ .Name }} Details {{end}}
 {{ define "content" }}
     <h2>Fruit Details</h2>
+    <hr />
     <p>Name: {{ .Name }}</p>
-    <p><a href="/list">Back to List</a></p>
-    <p><a href="/edit?id={{ .ID }}">Edit</a></p>
-    <p><a href="/delete?id={{ .ID }}">Delete</a></p>
+    <p class="d-flex flex-inline justify-content-center">
+        <a href="/list" class="btn btn-dark col-12 m-1">Back to List</a>
+        <a href="/edit?id={{ .ID }}" class="btn btn-info col-12 m-1">Edit</a>
+        <a href="/delete?id={{ .ID }}" class="btn btn-danger col-12 m-1">Delete</a>
+    </p>
 {{ end }}

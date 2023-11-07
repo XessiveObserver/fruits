@@ -1,12 +1,13 @@
 {{define "title"}}All Fruits{{end}}
 {{ define "content" }}
     <h2>List of Fruits</h2>
-    <ul>
+    <hr>
+    <ul class="list-group list-group-flush">
         {{ range . }}
-        <li>
+        <li class="list-group-item">
         {{ .Name }}- <a href="/fruit?id={{ .ID }}">View Details</a>
         </li>
         {{ end }}
     </ul>
-    <p><a href="/add">Add a Fruit</a></p>
+    <p><a href="/add" class="btn btn-primary col-12">Add a Fruit</a></p>
 {{ end }}
