@@ -1,11 +1,12 @@
 {{define "title"}} {{ .Name }} Details {{end}}
 {{ define "content" }}
-    <h2>Fruit Details</h2>
-    <hr />
-    <p>Name: {{ .Name }}</p>
-    <p class="d-flex flex-inline justify-content-center">
-        <a href="/list" class="btn btn-dark col-12 m-1">Back to List</a>
-        <a href="/edit?id={{ .ID }}" class="btn btn-info col-12 m-1">Edit</a>
-        <a href="/delete?id={{ .ID }}" class="btn btn-danger col-12 m-1">Delete</a>
+<div class="row col-sm-4 d-flex flex-column justify-content-center align-items-center">
+    <h2 class="shadow-none p-3 mt-3 bg-light text-center rounded">{{ .Name }} Details</h2>
+    <p><b>Name:</b> {{ .Name }}</p>
+    <p class="d-flex flex-inline">
+        <a href="/list" class="btn btn-dark col-3 m-1">Back to List</a>
+        <a href="/edit?id={{ .ID }}" class="btn btn-success col-3 m-1">Edit</a>
+        <a href="/delete?id={{ .ID }}" class="btn btn-danger col-3 m-1">Delete</a>
     </p>
+</div>
 {{ end }}

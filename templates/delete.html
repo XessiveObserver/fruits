@@ -1,11 +1,15 @@
 {{define "title"}} Delete - {{ .Name }} {{end}}
 {{ define "content" }}
-    <h2>Delete Fruit</h2>
-    <p>Are you sure you want to delete the following fruit?</p>
-    <p>Name: {{ .Name }}</p>
-    <form action="/delete" method="post">
-        <input type="hidden" name="id" value="{{ .ID }}">
-        <input type="submit" value="Delete">
-    </form>
-    <p><a href="/list">Cancel</a></p>
+    <div class="row col-sm-4 m-3 d-flex flex-column justify-content-center align-items-center">
+        <h2 class="shadow-none p-3 mt-3 bg-light rounded text-center text-danger">Delete Fruit</h2>
+        <p class="text-danger">Are you sure you want to delete the following fruit?</p>
+        <p> <b>Name:</b> {{ .Name }}</p>
+        <form action="/delete" method="post">
+            <input type="hidden" name="id" value="{{ .ID }}">
+            <p class="d-flex flex-inline">
+                <input type="submit" value="Delete" class="btn btn-danger col-6 m-1">
+                <a href="/list" class="btn btn-dark col-6 m-1">Cancel</a>
+            </p>
+        </form>
+    </div>
 {{ end }}

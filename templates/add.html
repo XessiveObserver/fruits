@@ -1,9 +1,11 @@
 {{define "title"}}Add fruit{{end}}
 {{ define "content" }}
-    <h2>Add a Fruit</h2>
-    <form action="/add" method="post">
-        <label for="name">Fruit name:</label>
-        <input type="text" name="name" id="name" required><br>
-        <input type="submit" value="Add">
+<div class="row col-sm-4 m-3 d-flex flex-column justify-content-center">
+    <h2 class="shadow-none bg-light rounded text-center p-3">Add a Fruit</h2>
+    <form action="/add" method="post" class="my-2 ">
+        <label for="name" class="form-label">Fruit name:</label>
+        <input class="form-control" type="text" name="name" id="name" required><br>
+        <input type="submit" value="Add" class="btn btn-primary col-12">
     </form>
+</div>
 {{ end }}

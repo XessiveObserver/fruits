@@ -1,11 +1,15 @@
 {{define "title"}} Edit - {{ .Name }} {{end}}
 {{ define "content" }}
-<h2>Edit Fruit</h2>
-<form action="/edit" method="post">
-    <input type="hidden" name="id" value="{{ .ID }}">
-    <label for="name">Name:</label>
-    <input type="text" name="name" id="name" value="{{ .Name }}" required><br>
-    <input type="submit" value="Update">
-</form>
-<p><a href="/list">Back to List</a></p>
+<div class="row col-sm-4 m-3 d-flex flex-column justify-content-center align-items-center">
+    <h2 class="shadow-none p-3 mt-3 bg-light rounded">Edit {{ .Name }} Fruit</h2>
+    <form action="/edit" method="post">
+        <input type="hidden" name="id" value="{{ .ID }}">
+        <label for="name" class="form-label">Name:</label>
+        <input class="form-control" type="text" name="name" id="name" value="{{ .Name }}" required><br>
+        <p class="d-flex flex-inline">
+            <a href="/list" class="btn btn-dark col-6 m-1">Back to List</a>
+            <input type="submit" value="Update" class="btn btn-success col-6 m-1">
+        </p>
+    </form>
+</div>
 {{ end }}

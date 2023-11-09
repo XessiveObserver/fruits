@@ -1,13 +1,14 @@
 {{define "title"}}All Fruits{{end}}
 {{ define "content" }}
-    <h2>List of Fruits</h2>
-    <hr>
-    <ul class="list-group list-group-flush">
-        {{ range . }}
-        <li class="list-group-item">
-        {{ .Name }}- <a href="/fruit?id={{ .ID }}">View Details</a>
-        </li>
-        {{ end }}
-    </ul>
-    <p><a href="/add" class="btn btn-primary col-12">Add a Fruit</a></p>
+    <div class="row col-sm-4 d-flex flex-column justify-content-center align-items-center">
+        <h2 class="shadow-none p-3 mt-3 bg-light text-center rounded">List of Fruits</h2>
+        <ul class="list-group list-group-flush py-2">
+            {{ range . }}
+            <li class="list-group-item shadow-none bg-light">
+            {{ .Name }} - <a class=" btn btn-link" href="/fruit?id={{ .ID }}">View Details</a>
+            </li>
+            {{ end }}
+        </ul>
+        <a href="/add" class="btn btn-primary col-12">Add a Fruit</a>
+    </div>
 {{ end }}
